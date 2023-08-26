@@ -70,30 +70,24 @@ const PokemonCard = ({ pokemonUrl }) => {
 
   return (
     <section
-      className={`border-2 border-[${pokeLineaBorder[pokemon?.types[0]?.type?.name]}] relative rounded-bl-2xl rounded-br-2xl hover:[animation:scale-105]`}
+      className={`bg-[${pokeLineaBorder[pokemon?.types[0]?.type?.name]}] `}
 
     >
 
 
 
-      <article className="grid  px-2 flex flex-col items-center justify-center rounded-2xl align-center">
+      <article className="grid  px-2 flex flex-col items-center justify-center rounded-2xl">
 
 
 
         {/* Sección de la imagen */}
         <section
-          className={`relative h-44 w-full ${pokeLinearGradients[pokemon?.types[0]?.type?.name]
+          className={`relative h-3 ${pokeLinearGradients[pokemon?.types[0]?.type?.name]
             }`}
         >
-          <div className="absolute px-12 -bottom-10  items-center justify-center">
+          <div className="absolute px-10 -bottom-10 flex items-center justify-center">
             <img
-              src=
-              
-              {pokemon?.sprites?.other["official-artwork"].front_default}
-
-
-
-              
+              src={pokemon?.sprites?.other["official-artwork"].front_default}
               alt={pokemon?.name}
               className=""
             />

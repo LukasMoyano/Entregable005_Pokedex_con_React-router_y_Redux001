@@ -33,7 +33,7 @@ const Home = () => {
   };
 
   return (
-    <main className="row-gap column-gap  grid grid-rows-[1fr_auto] min-h-screen bg-[#E5E5E5]">
+    <main className="row-gap column-gap  grid grid-rows-[1fr_auto] min-h-screen">
       {/* Sección superior */}
       <section className="flex flex-col items-center justify-center mx-2">
         <article>

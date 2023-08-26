@@ -33,7 +33,7 @@ const Home = () => {
   };
 
   return (
-    <main className="row-gap column-gap  grid grid-rows-[1fr_auto] min-h-screen bg-[#E5E5E5]">
+    <main className="row-gap column-gap  grid grid-rows-[1fr_auto] min-h-screen">
       {/* Sección superior */}
       <section className="flex flex-col items-center justify-center mx-2">
         <article>
@@ -46,20 +46,21 @@ const Home = () => {
           <p className="text-center text-lg">
             To start, please introduce your...
           </p>
-          <form onSubmit={handleSubmit} className="flex justify-center">
+          <form onSubmit={handleSubmit} className="flex justify-center
+          
+          
+          relative mb-3 xl:w-96 mx-2 align-baseline bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 sm:w-96
+          
+          
+          
+          
+          ">
             <input
               required
               id="nameTrainer"
               type="text"
               placeholder="Nickname..."
-              className="
-              
-              
-              relative mb-3 xl:w-96 mx-2 align-baseline bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 sm:w-96
-              
-              
-              
-              mr-1"
+              className="mr-1"
             />
             <button
               type="submit"

@@ -23,7 +23,6 @@ const pokeLinearGradients = {
   normal: "bg-gradient-to-b from-indigo-700 via-purple-500 to-pink-300",
 };
 
-
 const pokeLineaBorder = {
   normal: "bg-[#c3c3c3]",
   fighting: "bg-[#dd6500]",
@@ -45,55 +44,36 @@ const pokeLineaBorder = {
   flying: "bg-[#93f2efc3]",
 };
 
-
 const PokemonCard = ({ pokemonUrl }) => {
-  // Definición del estado local para almacenar los datos del Pokémon
   const [pokemon, setPokemon] = useState(null);
 
-  // Función para formatear los tipos de Pokémon en una cadena legible
   const formatTypesPokemon = (types = []) => {
     const nameTypes = types.map((type) => type.type.name);
     const titleTypes = nameTypes.join(" / ");
     return titleTypes;
   };
 
-  // Efecto secundario que se ejecuta cuando cambia la URL del Pokémon
   useEffect(() => {
-    // Hacer una solicitud HTTP para obtener los datos del Pokémon
     axios
       .get(pokemonUrl)
       .then(({ data }) => {
-        setPokemon(data); // Actualizar el estado con los datos del Pokémon
+        setPokemon(data);
       })
       .catch((err) => console.log(err));
   }, [pokemonUrl]);
 
+  const borderColorClass = `border-4 ${pokeLineaBorder[pokemon?.types[0]?.type?.name]}`;
+
   return (
-    <section
-      className={`border-2 border-[${pokeLineaBorder[pokemon?.types[0]?.type?.name]}] relative rounded-bl-2xl rounded-br-2xl hover:[animation:scale-105]`}
-
-    >
-
-
-
-      <article className="grid  px-2 flex flex-col items-center justify-center rounded-2xl align-center">
-
-
-
+    <section className={`rounded-lg border-4${borderColorClass}`}>
+      <article className="grid h-[383px] w-[261px] px-2 flex flex-col items-center justify-center rounded-2xl">
         {/* Sección de la imagen */}
         <section
-          className={`relative h-44 w-full ${pokeLinearGradients[pokemon?.types[0]?.type?.name]
-            }`}
+          className={`relative h-32 ${pokeLinearGradients[pokemon?.types[0]?.type?.name]}`}
         >
-          <div className="absolute px-12 -bottom-10  items-center justify-center">
+          <div className="absolute px-10 -bottom-10 flex items-center justify-center">
             <img
-              src=
-              
-              {pokemon?.sprites?.other["official-artwork"].front_default}
-
-
-
-              
+              src={pokemon?.sprites?.other["official-artwork"].front_default}
               alt={pokemon?.name}
               className=""
             />
@@ -129,7 +109,6 @@ const PokemonCard = ({ pokemonUrl }) => {
         {/* Sección de estadísticas */}
         <section className="font-press+Start">
           <div className="grid grid-cols-3 gap-1">
-            {/* Mapear y mostrar las estadísticas del Pokémon */}
             {pokemon?.stats?.map((stat) => (
               <div
                 className="flex flex-col items-center p-2 border border-gray-300 rounded-lg"
@@ -149,11 +128,9 @@ const PokemonCard = ({ pokemonUrl }) => {
         </section>
       </article>
     </section>
-
   );
 };
 
-// Propiedades requeridas para el componente
 PokemonCard.propTypes = {
   pokemonUrl: PropTypes.string.isRequired,
 };
