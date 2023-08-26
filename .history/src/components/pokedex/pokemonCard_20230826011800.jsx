@@ -82,10 +82,10 @@ const PokemonCard = ({ pokemonUrl }) => {
 
         {/* Sección de la imagen */}
         <section
-          className={`relative h-72 w-full ${pokeLinearGradients[pokemon?.types[0]?.type?.name]
+          className={`relative h-44 w-full ${pokeLinearGradients[pokemon?.types[0]?.type?.name]
             }`}
         >
-          <div className="absolute px-12 flex items-center justify-center">
+          <div className="absolute px-12 -mb-5  items-center justify-center">
             <img
               src={pokemon?.sprites?.other["official-artwork"].front_default}            
               alt={pokemon?.name}
