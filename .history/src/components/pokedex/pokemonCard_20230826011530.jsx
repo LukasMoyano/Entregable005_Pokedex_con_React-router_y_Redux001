@@ -85,7 +85,7 @@ const PokemonCard = ({ pokemonUrl }) => {
           className={`relative h-44 w-full ${pokeLinearGradients[pokemon?.types[0]?.type?.name]
             }`}
         >
-          <div className="absolute px-12 -mb-10  items-center justify-center">
+          <div className="absolute px-12 -py-20 -mb-10  items-center justify-center">
             <img
               src={pokemon?.sprites?.other["official-artwork"].front_default}            
               alt={pokemon?.name}

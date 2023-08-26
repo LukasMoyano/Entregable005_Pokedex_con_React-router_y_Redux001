@@ -76,7 +76,7 @@ const PokemonCard = ({ pokemonUrl }) => {
 
 
 
-      <article className=" grid px-2 flex-col items-center justify-center rounded-2xl align-center">
+      <article className=" grid px-2 py-24 flex-col items-center justify-center rounded-2xl align-center">
 
 
 

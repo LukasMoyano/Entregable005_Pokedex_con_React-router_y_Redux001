@@ -76,7 +76,7 @@ const PokemonCard = ({ pokemonUrl }) => {
 
 
 
-      <article className=" grid px-2 flex-col items-center justify-center rounded-2xl align-center">
+      <article className=" grid  px-2 py-2 flex-col items-center justify-center rounded-2xl align-center">
 
 
 
@@ -85,7 +85,7 @@ const PokemonCard = ({ pokemonUrl }) => {
           className={`relative h-44 w-full ${pokeLinearGradients[pokemon?.types[0]?.type?.name]
             }`}
         >
-          <div className="absolute px-12 -mb-10  items-center justify-center">
+          <div className="absolute px-12 -bottom-10  items-center justify-center">
             <img
               src={pokemon?.sprites?.other["official-artwork"].front_default}            
               alt={pokemon?.name}
