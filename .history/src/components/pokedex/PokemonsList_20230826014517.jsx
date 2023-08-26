@@ -48,10 +48,8 @@ const PokemonsList = ({ pokemons }) => {
           </li>
         ))}
       </ul>
-
-
       {/* Navegación entre páginas */}
-      <div className="mb-10 flex justify-center mt-4">
+      <div className="flex justify-center mt-4">
         <button
           onClick={goToPreviousPage}
           disabled={currentPage === 1}

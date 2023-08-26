@@ -83,7 +83,7 @@ const Pokedex = () => {
       </section>
 
 
-      <section className=" mt-5 mb-10 flex flex-col sm:flex-row justify-center items-center">
+      <section className="capitalize mt-5 mb-10 flex flex-col sm:flex-row justify-center items-center">
         {/* Formulario de búsqueda */}
         <form onSubmit={handleSubmit} className="flex">
           {/* Input de búsqueda */}
@@ -106,7 +106,7 @@ const Pokedex = () => {
         </form>
 
         {/* Selección por tipo */}
-        <select onChange={handleChangeType} className=" capitalize mt-3 sm:mt-0 sm:ml-3">
+        <select onChange={handleChangeType} className="items-center justify-center mt-3 sm:mt-0 sm:ml-3">
           <option value="">By Type</option>
           {types.map((type) => (
             <option

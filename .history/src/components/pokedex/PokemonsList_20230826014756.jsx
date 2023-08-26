@@ -42,16 +42,14 @@ const PokemonsList = ({ pokemons }) => {
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {visiblePokemons.map((pokemon) => (
           <li key={pokemon.url} className="w-full h-full">
-            <div className="bg-white w-250 h-383 mx-auto">
+            <div >
               <PokemonCard pokemonUrl={pokemon.url} />
             </div>
           </li>
         ))}
       </ul>
-
-
       {/* Navegación entre páginas */}
-      <div className="mb-10 flex justify-center mt-4">
+      <div className="flex justify-center mt-4">
         <button
           onClick={goToPreviousPage}
           disabled={currentPage === 1}
