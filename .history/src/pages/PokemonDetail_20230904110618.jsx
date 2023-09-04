@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getPokemonsById } from "../services/pokemons.services";
-import StartBarList from "../components/pokemonDetail/StatBarList"; // Corregir el nombre del componente importado
+import StartBarrLIst from "components/pokedex/PokemonsList.jsx";
 
 const PokemonDetail = () => {
   const { pokemonId } = useParams();
@@ -23,6 +23,8 @@ const PokemonDetail = () => {
 
   return (
     <main className="capitalize flex justify-center items-center mt-[10%] md:mt-12">
+      {/* <Header /> */}
+
       <article className="">
         <header className="">
           <div className="flex justify-center items-center -mt-8">
@@ -70,9 +72,9 @@ const PokemonDetail = () => {
               <span>{pokemonData?.abilities[0]?.ability?.name}</span>
             </h5>
           </div>
-          </header>
+        </header>
         <section>
-          <StartBarList stats={pokemonData.stat} />
+        <StartBarrLIst stats={pokemonData?.stats} />
         </section>
       </article>
     </main>

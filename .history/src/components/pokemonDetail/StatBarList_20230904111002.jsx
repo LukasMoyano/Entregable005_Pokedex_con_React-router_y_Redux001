@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
-import BarProgressStat from "./BarProgressStat"; 
 
-const StartBarList = ({ stats }) => {
+import BarProgressStat from "./BarProgressStat";
+
+const StartBarrList = ({ stats }) => {
   return (
-    <section className="">
-      <h3 className="text-2xl">Stats</h3>
+    <section className="mx-7 capitalize shadow-2xl mb-6">
+      <h3 className="mx-1 font-bold">Stats</h3>
       <section>
         {stats?.map((stat) => (
           <BarProgressStat key={stat.name} stat={stat} />
@@ -14,7 +15,7 @@ const StartBarList = ({ stats }) => {
   );
 };
 
-StartBarList.propTypes = {
+StartBarrList.propTypes = {
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -23,4 +24,5 @@ StartBarList.propTypes = {
   ).isRequired,
 };
 
-export default StartBarList;
+
+export default StartBarrList;

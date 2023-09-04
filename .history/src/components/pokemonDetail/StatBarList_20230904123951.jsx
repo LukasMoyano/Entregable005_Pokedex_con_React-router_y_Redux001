@@ -1,5 +1,6 @@
+import React from "react"; // Asegúrate de importar React si aún no lo has hecho
 import PropTypes from "prop-types";
-import BarProgressStat from "./BarProgressStat"; 
+import BarProgressStat from "./BarProgressStat"; // Importa BarProgressStat desde su archivo
 
 const StartBarList = ({ stats }) => {
   return (

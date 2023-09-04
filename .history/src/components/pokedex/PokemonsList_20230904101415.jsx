@@ -15,7 +15,7 @@ const PokemonsList = ({ pokemons }) => {
   const endIndex = currentPage * ITEMS_PER_PAGE;
 
   // Obtener los Pokémon visibles en la página actual
-  const  visiblePokemons = pokemons.slice(startIndex, endIndex);
+  const git visiblePokemons = pokemons.slice(startIndex, endIndex);
 
   // Función para ir a una página específica
   const goToPage = (page) => {

@@ -72,6 +72,7 @@ const PokemonDetail = () => {
           </div>
           </header>
         <section>
+          {/* Aquí deberías pasar pokemonData.stat en lugar de PokemonDetail?.stat */}
           <StartBarList stats={pokemonData.stat} />
         </section>
       </article>

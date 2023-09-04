@@ -1,21 +1,21 @@
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"; // Importa PropTypes
 
 const BarProgressStat = ({ stat }) => {
-  const getPercentBarProgress = (statValue) => {
+  const getPorcentBarProgress = (statValue) => {
     const MAX_STAT_VALUE = 255;
-    const percent = (100 * statValue) / MAX_STAT_VALUE;
-    return `${percent}%`;
+    const porcent = (100 * statValue) / MAX_STAT_VALUE;
+    return `${porcent}%`;
   };
 
   return (
     <article>
-      <section className="flex justify-between px-2">
+      <section className={"flex justify-between px-2  "}>
         <h5>{stat.name}</h5>
         <span>{stat.value}/255</span>
       </section>
       <div className="h-6 bg-ice rounded-xl mx-1 shadow-2xl">
         <div
-          style={{ width: getPercentBarProgress(stat.value) }}
+          style={{ width: getPorcentBarProgress(stat.value) }}
           className="h-full bg-gradient-to-r from-electric/50 to-fighting/50 rounded-xl shadow-2xl "
         ></div>
       </div>

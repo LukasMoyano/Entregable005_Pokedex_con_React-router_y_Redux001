@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import BarProgressStat from "./BarProgressStat"; 
 
 const StartBarList = ({ stats }) => {
   return (
@@ -15,7 +14,7 @@ const StartBarList = ({ stats }) => {
 };
 
 StartBarList.propTypes = {
-  stats: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf( 
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       value: PropTypes.number.isRequired,
