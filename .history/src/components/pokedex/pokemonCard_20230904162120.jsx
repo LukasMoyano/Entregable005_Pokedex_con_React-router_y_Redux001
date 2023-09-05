@@ -63,20 +63,22 @@ const PokemonCard = ({ pokemonUrl }) => {
     axios
       .get(pokemonUrl)
       .then(({ data }) => {
-        setPokemon(data); 
+        setPokemon(data); // Actualizar el estado con los datos del Pokémon
       })
       .catch((err) => console.log(err));
   }, [pokemonUrl]);
 
   return (
     <Link
-      to={`/pokedex/${pokemon?.name}`} className={`text-center border-[20px] border-[${borderStyledPkemonByType[pokemon?.types[0]?.type?.name]}] relative rounded-bl-2xl rounded-br-2xl hover:[animation:scale-105]`}>
-
+      to={`/pokedex/${pokemon?.name}`}
+      className={`text-center border-[${borderStyledPkemonByType[pokemon?.types[0]?.type?.name]}] relative rounded-bl-2xl rounded-br-2xl hover:[animation:scale-105]`}
+    >
       <div className="grid px-2 flex-col items-center justify-center rounded-2xl align-center">
-
         {/* Sección de la imagen */}
-        <header className={`relative h-[80px] w-full mb-6 ${bgStylePokemonType[pokemon?.types[0]?.type?.name]}`}>
-          
+        <header
+          className={`relative h-[80px] w-full mb-6 ${bgStylePokemonType[pokemon?.types[0]?.type?.name]
+            }`}
+        >
           <div className="absolute left-1/2 -translate-x-1/2 -bottom-10 h-[120px] aspect-square ">
             <img
               className="h-full w-full object-contain"
@@ -84,7 +86,6 @@ const PokemonCard = ({ pokemonUrl }) => {
               alt={pokemon?.name}
             />
           </div>
-          
         </header>
   
         {/* Sección NOMBRE */}
@@ -109,7 +110,10 @@ const PokemonCard = ({ pokemonUrl }) => {
             {formatTypesPokemon(pokemon?.types)}
           </h5>
         </section>
-
+  
+        {/* Línea divisoria */}
+        <hr />
+  
         {/* Sección de estadísticas */}
         <section>
           <div className="grid gap-2 grid-cols-3 text-xs p-2">

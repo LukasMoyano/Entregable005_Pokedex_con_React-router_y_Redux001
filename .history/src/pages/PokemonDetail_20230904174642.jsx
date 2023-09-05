@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getPokemonsById } from "../services/pokemons.services";
 import StartBarList from "../components/pokemonDetail/StatBarList"; // Corregir el nombre del componente importado
 import Header from "../components/pokedex/Header";
@@ -22,21 +22,39 @@ const PokemonDetail = () => {
     return <div>Loading...</div>;
   }
 
+  const handleHomeClick = () => {
+    // Implementa la lógica para regresar a la página de inicio
+  };
+
   return (
     <main className="Absolute capitalize">
       {/* Componente Header */}
       <section>
         {/* Franja Roja */}
-        <Header />
+        <div className="bg-red-600 h-16 relative">
+          <div className="absolute left-2 bottom-0 w-[230px]">
+            <img className="" src="/images/logo.png" alt="" />
+          </div>
+        </div>
 
+        {/* Franja Negra */}
+        <div className="bg-black h-12 -mb-[8px]"></div>
+
+        {/* La Bola */}
+        <button
+          onClick={handleHomeClick}
+          className="w-20 aspect-square bg-white border-[10px] border-black rounded-full absolute top-7 -right-6 transform -translate-x-1/2 after:content-[''] after:h-11 after:aspect-square after:bg-gray-800 after:rounded-full after:absolute after:bottom-2 after:left-2 after:transform after:border-[9px] after:border-black"
+        ></button>
 
         {/* Detalle del Pokémon */}
-        <article className="flex flex-col justify-center items-center mt-10">
+        <article className="flex flex-col justify-center items-center">
           {/* Franja Roja */}
           <div className="bg-red-600 h-1 w-full mb-4">
+            
           </div>
 
           <section>
+
           <header className="text-center">
             <div className="flex justify-center items-center -mt-8">
               <img
@@ -79,14 +97,23 @@ const PokemonDetail = () => {
                 <span>{formatTypesPokemon(pokemonData?.type)}</span>
               </h4>
               <h5 className="flex flex-col justify-items-center items-center">
-                <span className="font-semibold p-1 rounded-full">Skill</span>
+                <span className="font-semibold p-1 rounded-full bg-yellow-300">Skill</span>
                 <span>{pokemonData?.abilities[0]?.ability?.name}</span>
               </h5>
+              -1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1-1
             </div>
+            00000000000000000000000000000000
           </header>
+          1111111111111111111111111111111111
           </section>
-          <section className="mt-5">
+
+
+
+222222222222222222222222222
+          <section>
+            33333333333333333333333333
             <StartBarList stats={pokemonData.stat} />
+            4444444444444444444444444444
           </section>
 
 

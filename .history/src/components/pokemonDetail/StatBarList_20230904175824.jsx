@@ -3,7 +3,7 @@ import BarProgressStat from "./BarProgressStat";
 
 const StartBarList = ({ stats }) => {
   return (
-    <section className="place-items-center">
+    <section className="absolute place-items-center">
       <h3 className="text-2xl">Stats</h3>
       <section>
         {stats?.map((stat) => (

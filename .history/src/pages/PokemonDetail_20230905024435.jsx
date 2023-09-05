@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { getPokemonsById } from "../services/pokemons.services";
 import StartBarList from "../components/pokemonDetail/StatBarList"; // Corregir el nombre del componente importado
-import Header from "../components/pokedex/Header";
 
 const PokemonDetail = () => {
   const { pokemonId } = useParams();
@@ -22,13 +21,30 @@ const PokemonDetail = () => {
     return <div>Loading...</div>;
   }
 
+  const handleHomeClick = () => {
+    Navigate('/');
+  };
+
   return (
     <main className="Absolute capitalize">
       {/* Componente Header */}
       <section>
         {/* Franja Roja */}
-        <Header />
+        <div className="bg-red-600 h-[60px]">
+          <div className="left-2 bottom-0 w-[230px]">
+            <img className="" src="/images/logo.png" alt="" />
+          </div>
+        </div>
 
+        {/* Franja Negra */}
+        <div className="bg-black h-12"></div>
+
+        {/* La Bola */}
+        <button
+          onClick={handleHomeClick}
+          className="w-20 aspect-square bg-white border-[10px] border-black rounded-full absolute top-7 -right-6 transform -translate-x-1/2 after:content-[''] after:h-11 after:aspect-square after:bg-gray-800 after:rounded-full after:absolute after:bottom-2 after:left-2 after:transform after:border-[9px] after:border-black">
+
+        </button>
 
         {/* Detalle del Pokémon */}
         <article className="flex flex-col justify-center items-center mt-10">

@@ -76,7 +76,6 @@ const PokemonCard = ({ pokemonUrl }) => {
 
         {/* Sección de la imagen */}
         <header className={`relative h-[80px] w-full mb-6 ${bgStylePokemonType[pokemon?.types[0]?.type?.name]}`}>
-          
           <div className="absolute left-1/2 -translate-x-1/2 -bottom-10 h-[120px] aspect-square ">
             <img
               className="h-full w-full object-contain"
@@ -84,7 +83,6 @@ const PokemonCard = ({ pokemonUrl }) => {
               alt={pokemon?.name}
             />
           </div>
-          
         </header>
   
         {/* Sección NOMBRE */}

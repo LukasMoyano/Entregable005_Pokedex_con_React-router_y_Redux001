@@ -59,4 +59,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home; // Exporta el componente "Home" para que pueda ser utilizado en otros lugares de la aplicación.
